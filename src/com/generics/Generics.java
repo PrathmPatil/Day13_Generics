@@ -33,7 +33,7 @@ public class Generics <P extends Comparable<P>> {
    }
    public static <P> void printMax( P max)
    {
-	   System.out.println("Maximun Integer is "+max);
+	   System.out.println("Maximun String is "+max);
    }
 	public static void main(String[] args) {
 //		Integer xFlo, yFlo,zFlo;
@@ -47,19 +47,28 @@ public class Generics <P extends Comparable<P>> {
 		/*
 		 * Enter float value
 		 */
-		Float xFlo, yFlo,zFlo;
+//		Float xFlo, yFlo,zFlo;
+//		Scanner sc=new Scanner(System.in);
+//		System.out.print("Enter 1st Float :");
+//		xFlo=sc.nextFloat();
+//		System.out.print("Enter 2nd Float :");
+//		yFlo=sc.nextFloat();
+//		System.out.print("Enter 3rd Flaot :");
+//		zFlo=sc.nextFloat();
+//		
+		String xSti, ySti,zSti;
 		Scanner sc=new Scanner(System.in);
-		System.out.print("Enter 1st Float :");
-		xFlo=sc.nextFloat();
-		System.out.print("Enter 2nd Float :");
-		yFlo=sc.nextFloat();
+		System.out.print("Enter 1st String :");
+		xSti=sc.nextLine();
+		System.out.print("Enter 2nd String :");
+		ySti=sc.nextLine();
 		System.out.print("Enter 3rd Flaot :");
-		zFlo=sc.nextFloat();
+		zSti=sc.nextLine();
 		
 		/*
 		 * take value to generics
 		 */
-		new Generics(xFlo,yFlo,zFlo).max();
+		new Generics(xSti, ySti,zSti).max();
 		
 	}
 
