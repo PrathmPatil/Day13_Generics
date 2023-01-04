@@ -32,8 +32,9 @@ public class Generics <P extends Comparable<P>> {
 	   return max; 	   
    }
    public static <P> void printMax( P max)
-   {
+   { 
 	   System.out.println("Maximun String is "+max);
+	   System.out.println();
    }
 	public static void main(String[] args) {
 		/*
@@ -47,6 +48,7 @@ public class Generics <P extends Comparable<P>> {
 		yInt=sc.nextInt();
 		System.out.print("Enter 3rd Integer :");
 		zInt=sc.nextInt();
+		new Generics(xInt, yInt,zInt).max();
 		/*
 		 * Enter float value
 		 */
@@ -58,6 +60,7 @@ public class Generics <P extends Comparable<P>> {
 		yFlo=fl.nextFloat();
 		System.out.print("Enter 3rd Flaot :");
 		zFlo=fl.nextFloat();
+		new Generics(xFlo, yFlo,zFlo).max();
 /*
  * 	
  */
@@ -69,10 +72,12 @@ public class Generics <P extends Comparable<P>> {
 		ySti=st.nextLine();
 		System.out.print("Enter 3rd Flaot :");
 		zSti=st.nextLine();
+		new Generics(xSti, ySti,zSti).max();
 		
 		/*
 		 * take value to generics
 		 */
+		System.out.println("Print all Data :: ");
 		new Generics(xInt, yInt,zInt).max();
 		new Generics(xFlo, yFlo,zFlo).max();
 		new Generics(xSti, ySti,zSti).max();
